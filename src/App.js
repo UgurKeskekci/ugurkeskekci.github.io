@@ -1,21 +1,29 @@
+import Home from "./pages/homepage";
+import Developer from "./pages/developer";
+import Fitness from "./pages/fitness";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Work from './components/Work';
-import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
 function App() {
   return (
-   <div>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Work/>
-      <Contact/>
-
-
-   </div>
+    <>
+    
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/developer" element={<Developer />} />
+          <Route path="/fitness" element={<Fitness />} />
+        </Routes>
+      </Router>
+  
+    </>
   );
 }
 
